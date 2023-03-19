@@ -1,13 +1,13 @@
 package com.driver;
 
 public class Main {
-    static public class A {
+    public static class A {
         public String meth() {
             return "Invoking method from class A";
         }
     }
 
-   static public class B extends A {
+   public static class B extends A {
         public String meth(boolean flag) {
             return super.meth();
         }
@@ -17,7 +17,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        A obj = new A();
+        A obj = new B();
         obj.meth();
 
         B obj2 = new B();
