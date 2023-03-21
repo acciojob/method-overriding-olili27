@@ -8,10 +8,9 @@ public class Main {
     }
 
    public static class B extends A {
+       B obj = new B();
+//       obj.meth();
 
-        public void meth2() {
-            System.out.println(super.meth());
-        }
         @Override
         public String meth() {
             return "Method is overridden in Extended class B";
@@ -19,8 +18,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        B obj = new B();
-        obj.meth2();
-        System.out.println(obj.meth());
+        A obj = new A();
+        String ans = obj.meth();
+
+        B obj2 = new B();
+        String ans2 = obj2.meth();
     }
 }
