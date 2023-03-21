@@ -10,7 +10,7 @@ public class Main {
    public static class B extends A {
 
         public void meth2() {
-            super.meth();
+            System.out.println(super.meth());
         }
         @Override
         public String meth() {
@@ -21,6 +21,6 @@ public class Main {
     public static void main(String[] args) {
         B obj = new B();
         obj.meth2();
-        String ans = obj.meth();
+        System.out.println(obj.meth());
     }
 }
